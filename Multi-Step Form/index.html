@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <section class="form__steps">
+      <picture>
+        <source media="(max-width: 786px)" srcset="assets/images/bg-sidebar-mobile.svg
+        " class="red">
+        <img src="./assets/images/bg-sidebar-desktop.svg" alt="sidebar-background">
+      </picture>
+      <div class="form__steps-wrapper">
+        <div class="form__steps-box">
+          <p class="form__circle form__active">1</p>
+          <div class="form__text">
+            <h4>Step 1</h4>
+            <h3>Your info</h3>
+          </div>
+        </div>
+        <div class="form__steps-box">
+          <p class="form__circle">2</p>
+          <div class="form__text">
+            <h4>Step 2</h4>
+            <h3>Select Plan</h3>
+          </div>
+        </div>
+        <div class="form__steps-box">
+          <p class="form__circle">3</p>
+          <div class="form__text">
+            <h4>Step 3</h4>
+            <h3>Add-ons</h3>
+          </div>
+        </div>
+        <div class="form__steps-box">
+          <p class="form__circle">4</p>
+          <div class="form__text">
+            <h4>Step 4</h4>
+            <h3>Summary</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <form class="form__step" id="form__step-1">
+      <header class="form__header">
+        <h1 class="form__title">Personal info</h1>
+        <h4 class="form__subtitle">Please provide your name, email address, and phone number.</h4>
+      </header>
+      <div class="form__input-group">
+        <label class="form__input-label" for="form__input-name">Name</label>
+        <input type="text" class="form__input" id="form__input-name" placeholder="e.g. Stephen King" autofocus>
+        <div class="form__input--error-message"></div>
+      </div>
+      <div class="form__input-group">
+        <label class="form__input-label" for="form__input-email">Email Address</label>
+        <input type="text" class="form__input" id="form__input-email" placeholder="e.g. stephenking@lorem.com">
+        <div class="form__input--error-message"></div>
+      </div>
+      <div class="form__input-group">
+        <label class="form__input-label" for="form__input-phone">Phone Number</label>
+        <input type="number" class="form__input" id="form__input-phone" placeholder="e.g. +1 234 567 8900">
+        <div class="form__input--error-message"></div>
+      </div>
+      <div class="form__button-container">
+        <div></div>
+        <button type="submit" class="form__button-next button">Next Step</button>
+      </div>
+    </form>
+
+    <form class="form__step form__hidden" id="form__step-2" action="/">
+      <header class="form__header">
+        <h2 class="form__title">Select your plan</h2>
+        <h4 class="form__subtitle">You have the option of monthly or yearly billing.</h4>
+      </header>
+      <div class="form__boxes">
+        <div class="form__box">
+          <picture>
+            <img src="/assets/images/icon-arcade.svg" alt="Arcade">
+          </picture>
+          <div class="form__pricing">
+            <h4></h4>
+            <h5 class="form__pricing-container"><span class="form__step-2-price"></span></h5>
+            <span class="form__yearly-discount"></span>
+          </div>
+        </div>
+        <div class="form__box">
+          <picture>
+            <img src="/assets/images/icon-advanced.svg" alt="Advanced">
+          </picture>
+          <div class="form__pricing">
+            <h4></h4>
+            <h5 class="form__pricing-container"><span class="form__step-2-price"></span></h5>
+            <span class="form__yearly-discount"></span>
+          </div>
+        </div>
+        <div class="form__box form__box-active">
+          <picture>
+            <img src="/assets/images/icon-pro.svg" alt="Pro">
+          </picture>
+          <div class="form__pricing">
+            <h4></h4>
+            <h5 class="form__pricing-container"><span class="form__step-2-price"></span></h5>
+            <span class="form__yearly-discount"></span>
+          </div>
+        </div>
+        <div class="form__slider">
+          <h4 class="form__monthly">Monthly</h4>
+          <label class="form__switch">
+            <input id="form__input-checkbox" type="checkbox" name="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <h4 class="form__yearly">Yearly</h4>
+        </div>
+      </div>
+      <div class="form__button-container">
+        <button type="button" class="form__button-back button">Go Back</button>
+        <button type="button" class="form__button-next button">Next Step</button>
+      </div>
+    </form>
+
+    <form class="form__step form__hidden" id="form__step-3" action="/">
+      <header class="form__header">
+        <h1 class="form__title">Pick add-ons</h1>
+        <h4 class="form__subtitle">Add-ons help enhance your gaming experience.</h4>
+      </header>
+      <div class="form__rectangles">
+        <div class="form__rectangle">
+          <div class="form__rectangle-wrapper">
+            <input type="checkbox" name="checkbox" class="form__check">
+            <div class="form__rectangle-text">
+              <h4>Online Service</h4>
+              <h5>Access to multiplayer games</h5>
+            </div>
+          </div>
+          <span class="form__price">+1/mo</span>
+        </div>
+        <div class="form__rectangle">
+          <div class="form__rectangle-wrapper">
+            <input type="checkbox" name="checkbox" class="form__check">
+            <div class="form__rectangle-text">
+              <h4>Larger Storage</h4>
+              <h5>Extra 1TB of cloud save</h5>
+            </div>
+          </div>
+          <span class="form__price">+2/mo</span>
+        </div>
+        <div class="form__rectangle">
+          <div class="form__rectangle-wrapper">
+            <input type="checkbox" name="checkbox" class="form__check">
+            <div class="form__rectangle-text">
+              <h4>Customizable Profile</h4>
+              <h5>Custom theme on your profile</h5>
+            </div>
+          </div>
+          <span class="form__price">+2/mo</span>
+        </div>
+      </div>
+      <div class="form__button-container">
+        <button type="button" class="form__button-back button">Go Back</button>
+        <button type="button" class="form__button-next button">Next Step</button>
+      </div>
+    </form>
+
+    <form class="form__step form__hidden" id="form__step-4" action="/">
+      <header class="form__header">
+        <h1 class="form__title">Finishing up</h1>
+        <h4 class="form__subtitle">Double-check everything looks OK before confirming.</h4>
+      </header>
+      <div class="form__holders">
+        <div class="form__holders-top">
+          <div class="form__holder">
+            <div class="form__holder-line-box">
+              <h4 class="form__holder-pricing-choice"></h4>
+              <a class="form__change" href="index.html" draggable="true">Change</a>
+            </div>
+            <h4 class="form__holder-pricing-price"></h4>
+          </div>
+          <div class="line"></div>
+          <div class="form__holder-container"></div>
+        </div>
+        <div class="form__holders-bottom">
+          <!-- <div class="form__holder">
+            <h4>Total (per month)</h4>
+            <h3></h3>
+          </div> -->
+        </div>
+      </div>
+      <div class="form__button-container">
+        <button type="button" class="form__button-back button">Go Back</button>
+        <button type="button" class="form__button-next form__button-confirm button">Confirm</button>
+      </div>
+    </form>
+
+    <form class="form__step form__hidden" id="form__step-5" action="/">
+      <picture class="form__picture">
+        <img src="/assets/images/icon-thank-you.svg" alt="Thank you!">
+      </picture>
+      <div class="form__congrats">
+        <h2>Thank you!</h2>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.
+        </p>
+      </div>
+    </form>
+
+  </div>
+</body>
+
+</html>
